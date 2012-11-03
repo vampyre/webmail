@@ -14,6 +14,7 @@ public class User {
 
     private String username;
     private String password;
+    private Authentication auth = null;
 
     public User() {
     }
@@ -35,8 +36,14 @@ public class User {
     }
 
     public void login(Properties props) throws NoSuchProviderException, MessagingException {
-        Authentication auth = new Authentication(username, password);
+        auth = new Authentication(username, password);
         auth.connect(props);
     }
+
+	public boolean isAuthorized() {
+		if (null != auth) 
+			return auth.isConnected();
+		return false;		
+	}
 
 }

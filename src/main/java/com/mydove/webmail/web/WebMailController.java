@@ -26,11 +26,6 @@ public class WebMailController {
     @Resource(name = "imapProps") 
     private Properties props;
 	
-    @RequestMapping("/auth")
-    public String authPage() {
-        return "auth";
-    }
-
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String authorize(@ModelAttribute("user") User user,
             BindingResult result) {
@@ -63,4 +58,5 @@ public class WebMailController {
     public String home() {
         return "redirect:/index";
     }
+
 }

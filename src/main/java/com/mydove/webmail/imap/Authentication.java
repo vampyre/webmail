@@ -59,4 +59,11 @@ public class Authentication extends Authenticator {
         store = getSession(props).getStore(props.getProperty("store.protocol"));
         store.connect(props.getProperty("connect.host"), username, password);
     }
+    
+    public boolean isConnected() {
+    	if (null != store)
+    		return store.isConnected();
+    	return false;
+    }
+    
 }
