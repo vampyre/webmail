@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+    padding: 0;	
+	background-color: #F6F6F4;
+}
+
+#header {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	background: #A6C430;
+	width: 100%;
+	position: relative;
+	top: 0px;
+	left: 0px; 
+}
+
+#authForm {
+	background: #E8F6B1;
+	border: 20px;
+	padding: 20px;	
+}
+
+#authFormPosition {
+	margin-top: 10%;
+}
+
+#authFormResult {
+	background: transparent;
+}
